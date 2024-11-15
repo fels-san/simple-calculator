@@ -1,0 +1,64 @@
+*, *::before, *::after{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e3eb;
+}
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(120px, auto) repeat(5, 1fr);
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+}
+
+.container > button {
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.container > button:active {
+    transform: scale(0.99);
+}
+
+.operator {
+    color: #2f9fff;
+}
+
+.output {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: #6a6a6a;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: #000e1a;
+    font-size: 2.5rem;
+}
